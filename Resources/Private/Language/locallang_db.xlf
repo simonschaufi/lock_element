@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="">
+		<header>
+			<type>database</type>
+			<description>Language labels for database tables/fields belonging to extension 'lock_element'</description>
+			<authorName>Simon Schaufelberger</authorName>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="tt_content.tx_lockelement_locked">
+			<source>locked</source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>
