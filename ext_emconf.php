@@ -13,7 +13,7 @@ $EM_CONF['lock_element'] = [
     'version' => '1.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '7.6.0-8.7.99',
+            'typo3' => '8.3.0-8.7.99',
         ],
         'conflicts' => [],
         'suggests' => [],
