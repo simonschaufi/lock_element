@@ -35,13 +35,13 @@ class DataHandler
      *
      * @param string $command : reference to command: move,copy,version,delete or undelete
      * @param string $table : database table
-     * @param string $id : database record uid
+     * @param int $id : database record uid
      * @param array $value : reference to command parameter array
-     * @param object $pObj : page Object reference
+     * @param \TYPO3\CMS\Core\DataHandling\DataHandler $pObj : page Object reference
      *
      * @see \TYPO3\CMS\Core\DataHandling\DataHandler::process_cmdmap
      */
-    public function processCmdmap_preProcess(&$command, $table, $id, &$value, &$pObj)
+    public function processCmdmap_preProcess(string &$command, string $table, int $id, &$value, \TYPO3\CMS\Core\DataHandling\DataHandler &$pObj)
     {
         if ($command == 'delete' && ($table == 'tt_content' || $table == 'pages')) {
             //look for lock
