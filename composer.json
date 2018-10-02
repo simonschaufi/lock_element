@@ -9,7 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"SimonSchaufi\\MacinaBanners\\": "Classes"
+			"SimonSchaufi\\LockElement\\": "Classes"
 		}
 	},
 	"replace": {
