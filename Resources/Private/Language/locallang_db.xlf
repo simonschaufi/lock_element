@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-12-12T20:01:36Z">
 		<header>
 			<type>database</type>
 			<description>Language labels for database tables/fields belonging to extension 'lock_element'</description>
@@ -8,9 +8,24 @@
 			<generator>LFEditor</generator>
 		</header>
 		<body>
-		<trans-unit id="tt_content.tx_lockelement_locked">
-			<source>locked</source>
-		</trans-unit>
+			<trans-unit id="pages.palette_title">
+				<source><![CDATA[Lock element]]></source>
+			</trans-unit>
+			<trans-unit id="pages.tx_lockelement_locked">
+				<source><![CDATA[locked]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.palette_title">
+				<source><![CDATA[Lock element]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_lockelement_donate">
+				<source><![CDATA[Support this extension]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_lockelement_locked">
+				<source><![CDATA[locked]]></source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_lockelement_christmas_campaign">
+				<source><![CDATA[EXT:lock_element Christmas campaign]]></source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
