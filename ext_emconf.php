@@ -10,10 +10,10 @@ $EM_CONF['lock_element'] = [
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
     'author_company' => '',
-    'version' => '2.1.0',
+    'version' => '2.1.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.3.0-8.7.99',
+            'typo3' => '8.7.0-9.5.99',
         ],
         'conflicts' => [],
         'suggests' => [],
