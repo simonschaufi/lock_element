@@ -2,7 +2,7 @@
 	"name": "simonschaufi/lock-element",
 	"type": "typo3-cms-extension",
 	"description": "Lock Element",
-	"license": ["GPL-2.0+"],
+	"license": ["GPL-2.0-or-later"],
 	"keywords": ["TYPO3 CMS"],
 	"require": {
 		"typo3/cms-core": "^8.7 || ^9.5"
@@ -13,7 +13,6 @@
 		}
 	},
 	"replace": {
-		"lock_element": "self.version",
 		"typo3-ter/lock-element": "self.version"
 	},
 	"extra": {
