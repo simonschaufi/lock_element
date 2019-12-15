@@ -1,11 +1,11 @@
 {
 	"name": "simonschaufi/lock-element",
 	"type": "typo3-cms-extension",
-	"description": "Lock Element",
+	"description": "Lock Element. A locked element can't be deleted.",
 	"license": ["GPL-2.0-or-later"],
 	"keywords": ["TYPO3 CMS"],
 	"require": {
-		"typo3/cms-core": "^8.7 || ^9.5"
+		"typo3/cms-core": "^8.7 || ^9.5 || ^10.2"
 	},
 	"autoload": {
 		"psr-4": {

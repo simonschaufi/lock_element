@@ -14,6 +14,7 @@ $fields = [
         'config' => [
             'type' => 'user',
             'userFunc' => \SimonSchaufi\LockElement\UserFunction\TCA::class . '->donateField',
+            'renderType' => 'donationElement',
             'parameters' => []
         ]
     ],
@@ -23,6 +24,7 @@ $fields = [
         'config' => [
             'type' => 'user',
             'userFunc' => \SimonSchaufi\LockElement\UserFunction\TCA::class . '->christmasCampaign',
+            'renderType' => 'christmasCampaignElement',
             'parameters' => []
         ]
     ],
@@ -40,13 +42,3 @@ $GLOBALS['TCA']['tt_content']['palettes']['tx_lock_element'] = [
     'tt_content',
     '--palette--;LLL:EXT:lock_element/Resources/Private/Language/locallang_db.xlf:tt_content.palette_title;tx_lock_element'
 );
-
-// Add christmas campaign field
-if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        'tx_lockelement_christmas_campaign',
-        '',
-        'after:header'
-    );
-}

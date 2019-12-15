@@ -18,6 +18,12 @@
 			<trans-unit id="tx_lockelement_donate.christmas_campaign_text">
 				<source><![CDATA[I gave my best all over the year to maintain and improve this and many other extensions. Enough reasons to say THANK YOU with a little Christmas gift.]]></source>
 			</trans-unit>
+			<trans-unit id="tx_lockelement_donate.christmas_campaign_hidden">
+				<source><![CDATA[Christmas campaign hidden until next year.]]></source>
+			</trans-unit>
+			<trans-unit id="tx_lockelement_donate.christmas_campaign_hide">
+				<source><![CDATA[Hide until next year]]></source>
+			</trans-unit>
 			<trans-unit id="tx_lockelement_donate.github_donate_button_text">
 				<source><![CDATA[Sponsor via Github]]></source>
 			</trans-unit>

@@ -6,6 +6,8 @@ namespace SimonSchaufi\LockElement\UserFunction;
 use DateInterval;
 use DateTime;
 use TYPO3\CMS\Backend\Form\Element\UserElement;
+use TYPO3\CMS\Core\Registry;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 class TCA
@@ -21,13 +23,17 @@ class TCA
      *
      * @return string
      */
-    public function donateField(array $parameters, UserElement $pObj): string
+    public function donateField(array $parameters, ?UserElement $pObj): string
     {
         $text = LocalizationUtility::translate('tx_lockelement_donate.text', 'lock_element');
-        $paypalDonateButtonText =
-            LocalizationUtility::translate('tx_lockelement_donate.paypal_donate_button_text', 'lock_element');
-        $githubDonateButtonText =
-            LocalizationUtility::translate('tx_lockelement_donate.github_donate_button_text', 'lock_element');
+        $paypalDonateButtonText = LocalizationUtility::translate(
+            'tx_lockelement_donate.paypal_donate_button_text',
+            'lock_element'
+        );
+        $githubDonateButtonText = LocalizationUtility::translate(
+            'tx_lockelement_donate.github_donate_button_text',
+            'lock_element'
+        );
         return <<<HTML
             <p>$text <i class="fa fa-smile-o" aria-hidden="true"></i></p>
             <a href="https://www.paypal.me/simonschaufi" target="_blank" class="btn btn-default">
@@ -48,7 +54,7 @@ HTML;
      * @throws \Exception
      * @see https://thisinterestsme.com/php-days-until-christmas/
      */
-    public function christmasCampaign(array $parameters, UserElement $pObj): string
+    public function christmasCampaign(array $parameters, ?UserElement $pObj): string
     {
         $interval = static::getChristmasInterval();
 
@@ -62,7 +68,10 @@ HTML;
             'lock_element',
             [$interval->days]
         );
-        $text = LocalizationUtility::translate('tx_lockelement_donate.christmas_campaign_text', 'lock_element');
+        $text = LocalizationUtility::translate(
+            'tx_lockelement_donate.christmas_campaign_text',
+            'lock_element'
+        );
         $paypalDonateButtonText = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_paypal_donate_button_text',
             'lock_element'
@@ -71,16 +80,25 @@ HTML;
             'tx_lockelement_donate.christmas_campaign_github_donate_button_text',
             'lock_element'
         );
+        $hide = LocalizationUtility::translate(
+            'tx_lockelement_donate.christmas_campaign_hide',
+            'lock_element'
+        );
 
         return <<<HTML
-            <h4>$headline</h4>
-            <p>$text <i class="fa fa-smile-o" aria-hidden="true"></i></p>
-            <a href="https://www.paypal.me/simonschaufi" target="_blank" class="btn btn-default">
-                <strong><i class="fa fa-paypal" style="color: #0070ba;" aria-hidden="true"></i> $paypalDonateButtonText</strong>
-            </a>
-            <a href="https://github.com/sponsors/simonschaufi" target="_blank" class="btn btn-default">
-                <strong><i class="fa fa-heart" style="color: #ea4aaa;" aria-hidden="true"></i> $githubDonateButtonText</strong>
-            </a>
+            <div id="christmasCampaignWrapper">
+                <h4>$headline</h4>
+                <p>$text <i class="fa fa-smile-o" aria-hidden="true"></i></p>
+                <a href="https://www.paypal.me/simonschaufi" target="_blank" class="btn btn-default">
+                    <strong><i class="fa fa-paypal" style="color: #0070ba;" aria-hidden="true"></i> $paypalDonateButtonText</strong>
+                </a>
+                <a href="https://github.com/sponsors/simonschaufi" target="_blank" class="btn btn-default">
+                    <strong><i class="fa fa-heart" style="color: #ea4aaa;" aria-hidden="true"></i> $githubDonateButtonText</strong>
+                </a>
+                <button type="button" id="hideChristmasCampaignElement" class="btn btn-default">
+                    <i class="fa fa-times" aria-hidden="true"></i> $hide
+                </button>
+            </div>
 HTML;
     }
 
@@ -90,6 +108,13 @@ HTML;
      */
     public static function showChristmasCampaign(): bool
     {
+        $registry = GeneralUtility::makeInstance(Registry::class);
+        $hideChristmasCampaign = $registry->get('lock_element', 'hideChristmasCampaign-' . date('Y'));
+
+        if ($hideChristmasCampaign) {
+            return false;
+        }
+
         $interval = static::getChristmasInterval();
 
         // Check for errors
