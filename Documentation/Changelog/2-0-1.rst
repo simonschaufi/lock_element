@@ -1,0 +1,24 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+2.0.1
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+Bugfix release
+--------------
+
+Fix composer autoload
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2018-10-02 Fix composer autoload (Commit b6766bc by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

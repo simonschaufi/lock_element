@@ -1,0 +1,24 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+1.0.1
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+Bugfix release
+--------------
+
+Move code into sub folders
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2018-03-20 Move code into sub folders (Commit 9e4e248 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

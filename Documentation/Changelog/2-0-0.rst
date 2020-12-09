@@ -1,0 +1,25 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+2.0.0
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+Major release
+-------------
+
+Add new svg extension icon, drop TYPO3 7 support.
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2018-10-02 Release v2.0.0 (Commit efd8ad3 by Simon Schaufelberger)
+    2018-10-02 Add new svg extension icon (Commit cda3e98 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

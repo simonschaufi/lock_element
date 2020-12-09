@@ -1,6 +1,6 @@
 <?php
 
-// Add christmas campaign field
+// Add christmas campaign field to pages
 if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
@@ -10,7 +10,7 @@ if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
     );
 }
 
-// Add christmas campaign field
+// Add christmas campaign field to content elements
 if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',

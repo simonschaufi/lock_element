@@ -1,19 +1,20 @@
 <?php
-$EM_CONF['lock_element'] = [
+
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Lock Element',
     'description' => 'A locked element can\'t be deleted.',
     'category' => 'be',
+    'version' => '2.2.1',
+    'state' => 'stable',
+    'uploadfolder' => false,
+    'createDirs' => '',
+    'clearCacheOnLoad' => false,
     'author' => 'Simon Schaufelberger',
     'author_email' => 'simonschaufi+lockelement@gmail.com',
-    'state' => 'stable',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'clearCacheOnLoad' => 0,
     'author_company' => '',
-    'version' => '2.2.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-10.2.99',
+            'typo3' => '8.7.0-10.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],

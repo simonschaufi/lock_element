@@ -1,0 +1,25 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+2.0.3
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+Bugfix release
+--------------
+
+Migrate TCA
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+    2019-04-12 Migrate TCA (#1) (Commit 0628c2b by Simon Schaufelberger)
+    2018-10-02 Add annotations (Commit ac8fc34 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.

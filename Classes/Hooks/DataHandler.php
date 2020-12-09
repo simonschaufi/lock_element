@@ -23,10 +23,10 @@ class DataHandler
     public function processCmdmap_preProcess(string &$command, string $table, int $id, &$value, ParentDataHandler &$pObj)
     {
         if ($command == 'delete' && ($table == 'tt_content' || $table == 'pages')) {
-            //look for lock
+            // look for lock
             $rec = BackendUtility::getRecord($table, $id, 'tx_lockelement_locked');
             if ($rec['tx_lockelement_locked']) {
-                //remove delete command
+                // remove delete command
                 $command = '';
             }
         }

@@ -11,7 +11,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class ChristmasCampaignElement extends AbstractFormElement
 {
     /**
-     * @var \SimonSchaufi\LockElement\UserFunction\TCA
+     * @var TCA
      */
     protected $tcaUserFunction;
 
