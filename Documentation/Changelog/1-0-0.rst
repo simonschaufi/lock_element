@@ -13,7 +13,7 @@
 Major release
 -------------
 
-Compatibility update for TYPO3 7 and 8
+Compatibility update for TYPO3 7 and 8.
 
 All Changes
 -----------
