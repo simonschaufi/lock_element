@@ -1,17 +1,21 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+defined('TYPO3') or die();
+
+use SimonSchaufi\LockElement\Form\Element\ChristmasCampaignElement;
+use SimonSchaufi\LockElement\Form\Element\DonationElement;
+use SimonSchaufi\LockElement\Hooks\DataHandler;
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['lock_element'] =
-    \SimonSchaufi\LockElement\Hooks\DataHandler::class;
+    DataHandler::class;
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1576280585] = [
     'nodeName' => 'christmasCampaignElement',
     'priority' => 40,
-    'class' => \SimonSchaufi\LockElement\Form\Element\ChristmasCampaignElement::class,
+    'class' => ChristmasCampaignElement::class,
 ];
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1576280586] = [
     'nodeName' => 'donationElement',
     'priority' => 40,
-    'class' => \SimonSchaufi\LockElement\Form\Element\DonationElement::class,
+    'class' => DonationElement::class,
 ];

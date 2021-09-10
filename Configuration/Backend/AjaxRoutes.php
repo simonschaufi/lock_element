@@ -1,8 +1,10 @@
 <?php
 
+use SimonSchaufi\LockElement\Controller\ChristmasCampaignController;
+
 return [
     'hide-christmas-campaign' => [
         'path' => '/lock-element/hide-christmas-campaign',
-        'target' => \SimonSchaufi\LockElement\Controller\ChristmasCampaignController::class . '::hideChristmasCampaignAction'
+        'target' => ChristmasCampaignController::class . '::hideChristmasCampaignAction'
     ]
 ];

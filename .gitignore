@@ -1,5 +1,6 @@
 /.Build/
 /.idea/
 /.env
-/.php_cs.cache
+/.php-cs-fixer.cache
 /composer.lock
+/release.sh

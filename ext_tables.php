@@ -1,8 +1,13 @@
 <?php
 
+defined('TYPO3') or die();
+
+use SimonSchaufi\LockElement\UserFunction\TCA;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 // Add christmas campaign field to pages
-if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+if (TCA::showChristmasCampaign()) {
+    ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
         'tx_lockelement_christmas_campaign',
         '',
@@ -11,8 +16,8 @@ if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
 }
 
 // Add christmas campaign field to content elements
-if (\SimonSchaufi\LockElement\UserFunction\TCA::showChristmasCampaign()) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+if (TCA::showChristmasCampaign()) {
+    ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
         'tx_lockelement_christmas_campaign',
         '',

@@ -2,6 +2,21 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * (c) Simon Schaufelberger
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+
 namespace SimonSchaufi\LockElement\UserFunction;
 
 use DateInterval;
@@ -13,10 +28,7 @@ use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 class TCA
 {
-    /**
-     * @var DateInterval|null
-     */
-    private static $intervalCache;
+    private static ?DateInterval $intervalCache = null;
 
     /**
      * @param array $parameters
@@ -26,14 +38,14 @@ class TCA
      */
     public function donateField(array $parameters, ?UserElement $pObj): string
     {
-        $text = LocalizationUtility::translate('tx_lockelement_donate.text', 'lock_element');
+        $text = LocalizationUtility::translate('tx_lockelement_donate.text', 'LockElement');
         $paypalDonateButtonText = LocalizationUtility::translate(
             'tx_lockelement_donate.paypal_donate_button_text',
-            'lock_element'
+            'LockElement'
         );
         $githubDonateButtonText = LocalizationUtility::translate(
             'tx_lockelement_donate.github_donate_button_text',
-            'lock_element'
+            'LockElement'
         );
         return <<<HTML
             <p>$text <i class="fa fa-smile-o" aria-hidden="true"></i></p>
@@ -66,24 +78,24 @@ HTML;
 
         $headline = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_headline',
-            'lock_element',
+            'LockElement',
             [$interval->days]
         );
         $text = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_text',
-            'lock_element'
+            'LockElement'
         );
         $paypalDonateButtonText = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_paypal_donate_button_text',
-            'lock_element'
+            'LockElement'
         );
         $githubDonateButtonText = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_github_donate_button_text',
-            'lock_element'
+            'LockElement'
         );
         $hide = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_hide',
-            'lock_element'
+            'LockElement'
         );
 
         return <<<HTML

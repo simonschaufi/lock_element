@@ -1,5 +1,8 @@
 <?php
 
+use SimonSchaufi\LockElement\UserFunction\TCA;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 $fields = [
     'tx_lockelement_locked' => [
         'exclude' => 1,
@@ -13,7 +16,7 @@ $fields = [
         'label' => 'LLL:EXT:lock_element/Resources/Private/Language/locallang_db.xlf:tt_content.tx_lockelement_donate',
         'config' => [
             'type' => 'user',
-            'userFunc' => \SimonSchaufi\LockElement\UserFunction\TCA::class . '->donateField',
+            'userFunc' => TCA::class . '->donateField',
             'renderType' => 'donationElement',
             'parameters' => []
         ]
@@ -23,14 +26,14 @@ $fields = [
         'label' => 'LLL:EXT:lock_element/Resources/Private/Language/locallang_db.xlf:tt_content.tx_lockelement_christmas_campaign',
         'config' => [
             'type' => 'user',
-            'userFunc' => \SimonSchaufi\LockElement\UserFunction\TCA::class . '->christmasCampaign',
+            'userFunc' => TCA::class . '->christmasCampaign',
             'renderType' => 'christmasCampaignElement',
             'parameters' => []
         ]
     ],
 ];
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $fields);
+ExtensionManagementUtility::addTCAcolumns('tt_content', $fields);
 
 // Create new palette
 $GLOBALS['TCA']['tt_content']['palettes']['tx_lock_element'] = [
@@ -38,7 +41,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['tx_lock_element'] = [
 ];
 
 // Add palette
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
+ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--palette--;LLL:EXT:lock_element/Resources/Private/Language/locallang_db.xlf:tt_content.palette_title;tx_lock_element'
 );

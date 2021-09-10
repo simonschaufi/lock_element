@@ -2,6 +2,21 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * (c) Simon Schaufelberger
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+
 namespace SimonSchaufi\LockElement\Form\Element;
 
 use SimonSchaufi\LockElement\UserFunction\TCA;
@@ -11,10 +26,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 class ChristmasCampaignElement extends AbstractFormElement
 {
-    /**
-     * @var TCA
-     */
-    protected $tcaUserFunction;
+    protected TCA $tcaUserFunction;
 
     public function __construct(NodeFactory $nodeFactory, array $data)
     {
@@ -34,7 +46,6 @@ class ChristmasCampaignElement extends AbstractFormElement
         $result = $this->initializeResultArray();
         $result['requireJsModules'][] = ['TYPO3/CMS/LockElement/FormEngine/Element/ChristmasCampaignElement' => ''];
         $result['html'] = $this->tcaUserFunction->christmasCampaign([], null);
-
         return $result;
     }
 }

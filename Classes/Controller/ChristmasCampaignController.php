@@ -2,29 +2,32 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * (c) Simon Schaufelberger
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+
 namespace SimonSchaufi\LockElement\Controller;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\Http\JsonResponse;
-use TYPO3\CMS\Core\Http\Response;
 use TYPO3\CMS\Core\Registry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 class ChristmasCampaignController
 {
-    /**
-     * Default flags for json_encode; value of:
-     *
-     * <code>
-     * JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES
-     * </code>
-     *
-     * @var int
-     */
-    const DEFAULT_JSON_FLAGS = JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES;
-
     /**
      * AJAX endpoint for hiding the christmas campaign for the current year
      *
@@ -38,60 +41,12 @@ class ChristmasCampaignController
 
         $message = LocalizationUtility::translate(
             'tx_lockelement_donate.christmas_campaign_hidden',
-            'lock_element'
+            'LockElement'
         );
 
-        $content = [
+        return new JsonResponse([
             'success' => true,
             'message' => $message
-        ];
-
-        if (version_compare(TYPO3_version, '9.0.0', '>=')) {
-            return new JsonResponse($content);
-        }
-
-        return $this->createJsonResponse($content);
-    }
-
-    /**
-     * @param array|null $configuration
-     * @param int $statusCode
-     * @return Response
-     */
-    protected function createJsonResponse(array $data = [], $encodingOptions = self::DEFAULT_JSON_FLAGS): Response
-    {
-        $response = (new Response())
-            ->withHeader('Content-Type', 'application/json; charset=utf-8');
-
-        $response->getBody()->write($this->jsonEncode($data, $encodingOptions));
-        $response->getBody()->rewind();
-
-        return $response;
-    }
-
-    /**
-     * Encode the provided data to JSON.
-     *
-     * @param mixed $data
-     * @param int $encodingOptions
-     * @return string
-     * @throws \InvalidArgumentException if unable to encode the $data to JSON.
-     */
-    private function jsonEncode($data, $encodingOptions)
-    {
-        if (is_resource($data)) {
-            throw new \InvalidArgumentException('Cannot JSON encode resources', 1504972433);
-        }
-        // Clear json_last_error()
-        json_encode(null);
-        $json = json_encode($data, $encodingOptions);
-        if (JSON_ERROR_NONE !== json_last_error()) {
-            throw new \InvalidArgumentException(sprintf(
-                'Unable to encode data to JSON in %s: %s',
-                __CLASS__,
-                json_last_error_msg()
-            ), 1504972434);
-        }
-        return $json;
+        ]);
     }
 }
