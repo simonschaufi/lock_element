@@ -30,12 +30,6 @@ class TCA
 {
     private static ?DateInterval $intervalCache = null;
 
-    /**
-     * @param array $parameters
-     * @param \TYPO3\CMS\Backend\Form\Element\UserElement $pObj
-     *
-     * @return string
-     */
     public function donateField(array $parameters, ?UserElement $pObj): string
     {
         $text = LocalizationUtility::translate('tx_lockelement_donate.text', 'LockElement');
@@ -59,11 +53,6 @@ HTML;
     }
 
     /**
-     * @param array $parameters
-     * @param \TYPO3\CMS\Backend\Form\Element\UserElement $pObj
-     *
-     * @return string
-     *
      * @throws \Exception
      * @see https://thisinterestsme.com/php-days-until-christmas/
      */
@@ -116,7 +105,6 @@ HTML;
     }
 
     /**
-     * @return bool
      * @throws \Exception
      */
     public static function showChristmasCampaign(): bool

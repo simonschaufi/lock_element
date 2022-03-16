@@ -36,7 +36,7 @@ class DataHandler
      *
      * @see \TYPO3\CMS\Core\DataHandling\DataHandler::process_cmdmap
      */
-    public function processCmdmap_preProcess(string &$command, string $table, int $id, &$value, ParentDataHandler &$pObj)
+    public function processCmdmap_preProcess(string &$command, string $table, int $id, &$value, ParentDataHandler $pObj): void
     {
         if ($command === 'delete' && ($table === 'tt_content' || $table === 'pages')) {
             // look for lock
