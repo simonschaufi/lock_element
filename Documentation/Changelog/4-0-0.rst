@@ -1,0 +1,28 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+4.0.0
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+Major release
+-------------
+
+Drop TYPO3 8, 9 and 10 support.
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+   2022-03-16 [RELEASE] Release v4.0.0 (Commit fa037e8 by Simon Schaufelberger)
+   2022-03-16 [TASK] Add allowed composer plugins (Commit 5e7297c by Simon Schaufelberger)
+   2022-03-16 [TASK] Code cleanup (Commit 1ecc4b4 by Simon Schaufelberger)
+   2021-09-10 [TASK] Make fully compatible with TYPO3 11.4 (Commit e8130c1 by Simon Schaufelberger)
+   2021-07-20 [TASK] Remove extension key from GitHub Action (Commit 252f308 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
