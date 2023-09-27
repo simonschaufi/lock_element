@@ -36,7 +36,7 @@
 			</trans-unit>
 			<trans-unit id="tx_lockelement_donate.text" approved="yes">
 				<source><![CDATA[Do you think that lock_element has a great value for you or your company? Please donate!]]></source>
-				<target><![CDATA[Finden Sie, dass macina_banners einen großen Mehrwert für Sie oder Ihr Unternehmen hat? Bitte spenden Sie!]]></target>
+				<target><![CDATA[Finden Sie, dass lock_element einen großen Mehrwert für Sie oder Ihr Unternehmen hat? Bitte spenden Sie!]]></target>
 			</trans-unit>
 		</body>
 	</file>
