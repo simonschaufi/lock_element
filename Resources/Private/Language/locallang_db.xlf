@@ -17,14 +17,8 @@
 			<trans-unit id="tt_content.palette_title">
 				<source><![CDATA[Lock element]]></source>
 			</trans-unit>
-			<trans-unit id="tt_content.tx_lockelement_donate">
-				<source><![CDATA[Support this extension]]></source>
-			</trans-unit>
 			<trans-unit id="tt_content.tx_lockelement_locked">
 				<source><![CDATA[locked]]></source>
-			</trans-unit>
-			<trans-unit id="tt_content.tx_lockelement_christmas_campaign">
-				<source><![CDATA[EXT:lock_element Christmas campaign]]></source>
 			</trans-unit>
 		</body>
 	</file>
