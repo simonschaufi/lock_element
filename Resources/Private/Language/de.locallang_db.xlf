@@ -20,10 +20,6 @@
 				<source><![CDATA[Lock element]]></source>
 				<target><![CDATA[Element sperren]]></target>
 			</trans-unit>
-			<trans-unit id="tt_content.tx_lockelement_donate" approved="yes">
-				<source><![CDATA[Donation notice]]></source>
-				<target><![CDATA[Spendenhinweis]]></target>
-			</trans-unit>
 			<trans-unit id="tt_content.tx_lockelement_locked" approved="yes">
 				<source><![CDATA[locked]]></source>
 				<target><![CDATA[Gesperrt]]></target>
