@@ -1,0 +1,23 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+5.0.0
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+   2024-09-11 [RELEASE] Release v5.0.0 (Commit fc641af by Simon Schaufelberger)
+   2024-09-11 !!![TASK] Upgrade to TYPO3 12 (Commit fda7582 by Simon Schaufelberger)
+   2023-09-27 [TASK] Update GitHub workflows (Commit aa2d483 by Simon Schaufelberger)
+   2023-09-27 [TASK] Use correct extension name (Commit 0d1b00e by Simon Schaufelberger)
+   2022-03-16 [TASK] Remove tests for dev-master (Commit b577b87 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
