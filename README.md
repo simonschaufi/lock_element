@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/simonschaufi/lock-element/v/stable)](https://packagist.org/packages/simonschaufi/lock-element)
 [![Total Downloads](https://poser.pugx.org/simonschaufi/lock-element/downloads)](https://packagist.org/packages/simonschaufi/lock-element)
 [![License](https://poser.pugx.org/simonschaufi/lock-element/license)](https://packagist.org/packages/simonschaufi/lock-element)
-[![TYPO3](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
+[![TYPO3](https://img.shields.io/badge/TYPO3-12-orange.svg)](https://get.typo3.org/version/12)
 
 This extension makes it possible for TYPO3 backend users to lock single pages or content records from being deleted.
 
