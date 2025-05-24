@@ -1,0 +1,21 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+6.0.0
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+   2025-05-24 [RELEASE] Release v6.0.0 (Commit 32f2f41 by Simon Schaufelberger)
+   2025-05-24 [TASK] Upgrade to TYPO3 13 (Commit b382039 by Simon Schaufelberger)
+   2024-09-11 [TASK] Raise batch number to v12 (Commit 11f44fa by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
