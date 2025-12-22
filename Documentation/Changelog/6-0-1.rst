@@ -1,0 +1,20 @@
+.. include:: ../Includes.txt
+
+.. only:: html
+
+=====
+6.0.1
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+   2025-12-22 [RELEASE] Release v6.0.1 (Commit 0bbdb9a by Simon Schaufelberger)
+   2025-12-22 [BUGFIX] Value parameter is of type string (Commit d5dad35 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
