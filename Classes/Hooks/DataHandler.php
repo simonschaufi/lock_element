@@ -30,13 +30,13 @@ class DataHandler
      * @param string $command : reference to command: move,copy,version,delete or undelete
      * @param string $table : database table
      * @param int $id : database record uid
-     * @param array $value : reference to command parameter array
+     * @param string $value : reference to command parameter
      * @param ParentDataHandler $pObj : page Object reference
      * @param mixed $pasteUpdate : holds field/value pairs which should be updated after copy/move operation
      *
      * @see \TYPO3\CMS\Core\DataHandling\DataHandler::process_cmdmap
      */
-    public function processCmdmap_preProcess(string &$command, string $table, int $id, array &$value, ParentDataHandler $pObj, mixed $pasteUpdate): void
+    public function processCmdmap_preProcess(string &$command, string $table, int $id, string &$value, ParentDataHandler $pObj, mixed $pasteUpdate): void
     {
         if ($command === 'delete' && ($table === 'tt_content' || $table === 'pages')) {
             // look for lock
