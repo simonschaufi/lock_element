@@ -10,7 +10,7 @@ use Symfony\Component\Translation\Command\XliffLintCommand;
 use Symfony\Component\Yaml\Command\LintCommand;
 
 $application = new Application();
-$application->add(new XliffLintCommand(null, null, null, false));
-$application->add(new LintCommand());
+$application->addCommand(new XliffLintCommand(null, null, null, false));
+$application->addCommand(new LintCommand());
 
 exit($application->run());

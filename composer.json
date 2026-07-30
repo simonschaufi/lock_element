@@ -8,19 +8,18 @@
     ],
     "require": {
         "php": "^8.2",
-        "typo3/cms-backend": "^13.4",
-        "typo3/cms-core": "^13.4"
+        "typo3/cms-backend": "^14.3",
+        "typo3/cms-core": "^14.3"
     },
     "require-dev": {
-        "a9f/fractor-composer-json": "^0.5.0",
-        "a9f/typo3-fractor": "^0.5.0",
+        "a9f/fractor-composer-json": "^1.0",
+        "a9f/typo3-fractor": "^1.0",
         "ergebnis/composer-normalize": "^2.47",
         "ssch/typo3-rector": "^3.3.0",
         "symfony/translation": "^7.1.3",
-        "symplify/easy-coding-standard": "^12.5"
-    },
-    "replace": {
-        "typo3-ter/lock-element": "self.version"
+        "symplify/easy-coding-standard": "^12.5",
+        "typo3/cms-frontend": "^14.3",
+        "typo3/cms-install": "^14.3"
     },
     "autoload": {
         "psr-4": {
