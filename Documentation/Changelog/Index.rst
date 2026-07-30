@@ -1,5 +1,3 @@
-.. include:: ../Includes.txt
-
 .. _changelog:
 
 ==========
@@ -17,4 +15,4 @@ List of versions
    :reversed:
    :glob:
 
-   * 
+   *
