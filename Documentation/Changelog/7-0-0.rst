@@ -1,0 +1,16 @@
+=====
+7.0.0
+=====
+
+.. contents::
+        :local:
+        :depth: 3
+
+All Changes
+-----------
+This is a list of all changes in this release: ::
+
+   2026-07-30 [RELEASE] Release v7.0.0 (Commit d714730 by Simon Schaufelberger)
+   2026-07-30 [FEATURE] TYPO3 14 compatibility (Commit d01ba69 by Simon Schaufelberger)
+
+This list has been created by using `git log $(git describe --tags --abbrev=0)..HEAD --abbrev-commit --pretty='%ad %s (Commit %h by %an)' --date=short`.
