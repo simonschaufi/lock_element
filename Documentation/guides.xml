@@ -1,6 +1,7 @@
-<?xml version="7.0" encoding="UTF-8"?>
-<guides xmlns="https://www.phpdoc.org/guides" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://www.phpdoc.org/guides ../vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
+<?xml version="1.0" encoding="UTF-8"?>
+<guides xmlns="https://www.phpdoc.org/guides"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.phpdoc.org/guides ../.Build/vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
         links-are-relative="true"
         default-code-language="php"
 >
@@ -14,7 +15,7 @@
                interlink-shortcode="simonschaufi/lock-element"
     />
     <project title="Lock element"
-             release="local"
+             release="7.0.0"
              copyright="by Simon Schaufelberger"/>
     <inventory id="t3install" url="https://docs.typo3.org/m/typo3/guide-installation/main/en-us/"/>
 </guides>
